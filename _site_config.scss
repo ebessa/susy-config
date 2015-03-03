@@ -1,0 +1,38 @@
+// Configurações gerais do pre-processor
+// Configuração do grid "susy"
+//
+// $site-width     - Largura total do site, contabilizando o padding
+// $site-gutter    - Espaçamento entre as colunas do grid
+// $base-font-size - Fonte padrão do elemento &lt;html&gt;
+// $susy           - variável padrão pela qual o grid system procura ao ser inicializado
+// Documentação do Susy (grid system): http://susy.readthedocs.org/en/latest/
+//
+
+@import "susy";
+
+$fontsList: (
+  ('raleway-bold-webfont', relaway, bold, normal),
+  ('raleway-light-webfont', relaway, normal, normal),
+);
+
+$site-width: 1024px;
+$site-gutter: 1/4;
+$base-font-size: 16px;
+
+// breakpoints
+$breakpoint-large: 1206px; // $site-width + padding do logo negativo
+
+$susy: (
+  columns: 12,
+  container: $site-width,
+  container-position: center,
+  output: float,
+  global-box-sizing: border-box,
+  gutters: $site-gutter,
+  gutter-position: before,
+  debug: (
+    image: hide,
+    color: rgba(#ccc, .80),
+    output: background,
+  ),
+);
